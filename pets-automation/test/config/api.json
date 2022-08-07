@@ -1,0 +1,10 @@
+{
+    "base_url": "http://swagger-api:8080",
+    "v3": "/api/v3",
+    "service": {
+        "pet": "/pet",
+        "findByStatus": "/pet/findByStatus",
+        "findByTags": "/pet/findByTags",
+        "uploadImage": "/pet/uploadImage"        
+    }
+}
