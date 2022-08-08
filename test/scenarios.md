@@ -49,3 +49,10 @@
     1. POST -> http://localhost:8080/api/v3/pet
     1. DELETE -> http://localhost:8080/api/v3/pet/{ID}  
 -------------------------------------------------------------
+We can add more postive and negative scenarios to check how project behaves to errors:  
+500  
+400  
+404  
+401  
+403  
+and more...

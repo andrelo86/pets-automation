@@ -4,7 +4,9 @@
   "description": "Small API client to automate tests",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --json --outputFile='./testResults.json'",
+    "report": "allure serve",    
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/andrelo86/pets-automation#readme",
   "dependencies": {
+    "allure": "^0.0.0",
     "eslint": "^8.21.0",
     "jest": "^28.1.3",
     "superagent": "^8.0.0"

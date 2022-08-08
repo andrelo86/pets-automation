@@ -22,7 +22,8 @@ describe('Pet', () => {
         const res = await request
             .post(base_url + api.service.pet)
             .send(pet)
-
+        
+        // Assertions
         expect(res.status).toBe(200)
     })
 
@@ -32,6 +33,7 @@ describe('Pet', () => {
             .put(base_url + api.service.pet)
             .send(update_pet)
 
+        // Assertions
         expect(res.status).toBe(200)
         expect(res.body.name).toBe(updated_pet_name)
     })
@@ -40,7 +42,8 @@ describe('Pet', () => {
         const filter = filters.byStatus + status.available
         const res = await request
             .get(base_url + api.service.findByStatus + filter)
-
+        
+            // Assertions
         expect(res.status).toBe(200)
         expect(Array.isArray(res.body)).toBe(true)
         res.body.forEach((object) => {
@@ -55,6 +58,7 @@ describe('Pet', () => {
         const res = await request
             .get(base_url + api.service.findByTags + filter)
 
+        // Assertions
         expect(res.status).toBe(200)
         expect(Array.isArray(res.body)).toBe(true)
         let flag
@@ -70,7 +74,8 @@ describe('Pet', () => {
         const id = '10'
         const res = await request
             .get(base_url + api.service.pet + '/' + id)
-
+        
+        // Asssertions
         expect(res.status).toBe(200)
         expect(res.body.id.toString()).toBe(id)
     })
@@ -80,7 +85,8 @@ describe('Pet', () => {
         const res = await request
             .put(base_url + api.service.pet)
             .send(update_pet)
-
+        
+        // Assertions
         expect(res.status).toBe(200)
         expect(res.body.name).toBe('new_updated_pet_name')
         expect(res.body.status).toBe('spent')
