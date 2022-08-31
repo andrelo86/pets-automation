@@ -21,8 +21,7 @@ describe('Pet', () => {
     it('should create a new pet', async () => {
         const res = await request
             .post(base_url + api.service.pet)
-            .send(pet)
-        
+            .send(pet)        
         // Assertions
         expect(res.status).toBe(200)
     })

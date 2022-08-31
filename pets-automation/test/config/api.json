@@ -1,5 +1,5 @@
 {
-    "base_url": "http://localhost:8080",
+    "base_url": "http://swagger-api:8080",
     "v3": "/api/v3",
     "service": {
         "pet": "/pet",

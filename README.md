@@ -1,6 +1,7 @@
 # pets-automation
 
 ## stack
+- Docker
 - Javascript
 - npm  
 - jest  
@@ -20,5 +21,5 @@ As the application has services written in nodeJS, this stack will integrate wit
 ```git clone git@github.com:andrelo86/pets-automation.git```
 2. Install **npm** if you don't have it installed
 3. At project root level execute: ```npm install```
-4. Run SUT (System under test) as is mentioned in https://github.com/swagger-api/swagger-petstore
-5. Run tests ```npm test```
+4. Run docker-compose build
+5. Run docker-compose up -> All tests will be expected

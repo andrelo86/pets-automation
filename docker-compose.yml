@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+  swagger-api:
+    build:
+      context: ./swagger-petstore
+    ports:
+      - '8080:8080'
+  
+  pet-automation:
+    build:
+      context: ./pets-automation
+    command: bash -c 'sleep 2; yarn test' 
+    depends_on:
+      - swagger-api
